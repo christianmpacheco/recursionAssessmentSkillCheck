@@ -45,25 +45,37 @@ solution code must meet the following constraints:
 
 /* PROBLEM 1. findDuplicatesIterative: Must solve with iteration, not recursion */
 
-// Your code here 
+// Your code here
 
 
+const findDuplicatesIterative = (arr) => {
+  // first parameter has to be a callback function
+  const duplicates = arr.filter((item, index) => arr.indexOf(item) !== index);
+  return duplicates;
+}
+
+// console.log(findDuplicatesIterative([ 5, 8, 8, 2, 3 ]));
+// // [ 8 ]
+// console.log(findDuplicatesIterative([ 5, 8, 8, 8, 2, 3, 3 ]));
+// [ 8, 3 ] (only one 8; order of elements does not matter)
+console.log(findDuplicatesIterative([ 'a', 'word', 'a', 'another', 'word' ]));
+// [ 'word', 'a' ] (order of elements does not matter)
 
 /* PROBLEM 2. findDuplicatesRecursive: Must solve with recursion */
 
-// Your code here 
+// Your code here
 
 
 
 /* PROBLEM 3. findDuplicatesNoDefault: Must use recursion with no default parameters */
 
-// Your code here 
+// Your code here
 
 
 
 /* PROBLEM 4. findDuplicatesChallenge: No for/while loops OR array looping methods */
 
-// Your code here 
+// Your code here
 
 
 /*
